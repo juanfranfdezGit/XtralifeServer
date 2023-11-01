@@ -12,7 +12,7 @@ const db = mysql.createConnection({
     host: "frontier.es.mysql",
     user: "frontier_esxtralife",
     password: "181195",
-    database: "xfrontier_esxtralifetralife"
+    database: "frontier_esxtralife"
 });
 
 // Mensaje de comprobacion de nuestra base de datos
