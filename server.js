@@ -9,10 +9,10 @@ app.use(express.json());
 
 // Conexion con la base de datos
 const db = mysql.createConnection({
-    host: "dpg-cl0fcjas1bgc73a2t7lg-a",
-    user: "xtralife_user",
-    password: "uCrbWdfI6KfxWJdVxfzSnWNbgL6gbHJ6",
-    database: "xtralife"
+    host: "frontier.es.mysql",
+    user: "frontier_esxtralife",
+    password: "181195",
+    database: "xfrontier_esxtralifetralife"
 });
 
 // Mensaje de comprobacion de nuestra base de datos
