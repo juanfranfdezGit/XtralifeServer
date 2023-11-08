@@ -26,7 +26,7 @@ db.connect((err) => {
 });
 
 // Ruta para leer todos los productos en nuestra Home
-app.get('https://xtralife-server.onrender.com/', (req,res) => {
+app.get('https://xtralife.onrender.com/', (req,res) => {
     // Query para leer los datos de la tabla productos
     const sql3 = "SELECT * FROM products";
 
@@ -41,7 +41,7 @@ app.get('https://xtralife-server.onrender.com/', (req,res) => {
 })
 
 // Ruta de resgistro de usuarios en nuestra base de datos
-app.post('https://xtralife-server.onrender.com/signup', (req,res) => {
+app.post('https://xtralife.onrender.com/signup', (req,res) => {
      // Query para registrar tus datos en la base de datos
     const sql = "INSERT INTO users (`email`,`password`,`name`,`lastName`,`dni`,`address`) VALUES (?)";
     
@@ -66,7 +66,7 @@ app.post('https://xtralife-server.onrender.com/signup', (req,res) => {
 
 // Ruta para comprobar los datos introducidos e iniciar sesion si los encuentra en la base de datos
 // registrados
-app.post('https://xtralife-server.onrender.com/login', (req, res) => {
+app.post('https://xtralife.onrender.com/login', (req, res) => {
      // Query para encontrar tus datos en la base de datos
     const sql2 = "SELECT * FROM users WHERE email = ? AND password = ?";
 
@@ -84,7 +84,7 @@ app.post('https://xtralife-server.onrender.com/login', (req, res) => {
 })
 
 // Ruta donde eliminaremos el usuario
-app.post('https://xtralife-server.onrender.com/delete', (req, res) => {
+app.post('https://xtralife.onrender.com/delete', (req, res) => {
     // Query para eliminar el usuario que este acualmente logueado
     const sql25 = "DELETE FROM `users` WHERE `email`=?";
 
@@ -101,7 +101,7 @@ app.post('https://xtralife-server.onrender.com/delete', (req, res) => {
 })
 
 // Ruta donde subiremos los datos actualizados del usuario
-app.post('https://xtralife-server.onrender.com/edit', (req,res) => {
+app.post('https://xtralife.onrender.com/edit', (req,res) => {
     // Query para actualizar los datos segun el formulario
     const sql21 = "UPDATE `users` SET `email`=?, `password`=?, `name`=?, `lastName`=?, `dni`=?, `address`=? WHERE `email`=?";
     
@@ -127,7 +127,7 @@ app.post('https://xtralife-server.onrender.com/edit', (req,res) => {
 })
 
 // Ruta userPage donde veremos todos los datos registrados previamente
-app.get('https://xtralife-server.onrender.com/userPage', (req, res) => {
+app.get('https://xtralife.onrender.com/userPage', (req, res) => {
     // Query necesario para acceder al usuario
     const sql10 = "SELECT * FROM users WHERE email = ?";
 
