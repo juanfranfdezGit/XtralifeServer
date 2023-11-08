@@ -9,10 +9,11 @@ app.use(express.json());
 
 // Conexion con la base de datos
 const db = mysql.createConnection({
-    host: "frontier.es.mysql",
-    user: "frontier_esxtralifedb",
+    host: "db4free.net",
+    port: "3306",
+    user: "jfranrom",
     password: "18111995",
-    database: "frontier_esxtralifedb"
+    database: "xtralifedb"
 });
 
 // Mensaje de comprobacion de nuestra base de datos
