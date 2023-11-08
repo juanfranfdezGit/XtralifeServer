@@ -6,6 +6,12 @@ const localstorage = require('local-storage');
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*'); // Esto permite todas las solicitudes, pero puedes especificar orígenes específicos
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    next();
+  });
 
 // Conexion con la base de datos
 const db = mysql.createConnection({
